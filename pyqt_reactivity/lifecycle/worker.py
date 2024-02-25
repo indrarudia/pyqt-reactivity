@@ -6,7 +6,7 @@ T = TypeVar("T")
 R = ParamSpec("R")
 
 
-class Signal(QObject):
+class EventSignal(QObject):
     started = Signal()
     resolved = Signal(object)
     rejected = Signal(Exception)
@@ -27,7 +27,7 @@ class Worker(QRunnable):
         super().__init__()
 
         self.func = func
-        self.signals = Signal()
+        self.signals = EventSignal()
 
         if args is not None:
             self.args = args
