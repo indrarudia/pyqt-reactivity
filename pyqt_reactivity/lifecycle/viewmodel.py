@@ -1,4 +1,4 @@
-from PyQt6.QtCore import QObject
+from qtpy.QtCore import QObject
 
 
 class ViewModel(QObject):

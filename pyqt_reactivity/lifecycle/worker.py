@@ -1,16 +1,16 @@
 from typing import Any, Callable, Dict, Iterable, Optional, ParamSpec, TypeVar
 
-from PyQt6.QtCore import QObject, QRunnable, QThreadPool, pyqtSignal
+from qtpy.QtCore import QObject, QRunnable, QThreadPool, Signal
 
 T = TypeVar("T")
 R = ParamSpec("R")
 
 
 class Signal(QObject):
-    started = pyqtSignal()
-    resolved = pyqtSignal(object)
-    rejected = pyqtSignal(Exception)
-    finished = pyqtSignal()
+    started = Signal()
+    resolved = Signal(object)
+    rejected = Signal(Exception)
+    finished = Signal()
 
 
 class Worker(QRunnable):

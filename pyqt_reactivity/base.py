@@ -1,6 +1,6 @@
-from typing import Any, Callable, ParamSpec, TypeVar, Generic
+from typing import Any, Callable, Generic, ParamSpec, TypeVar
 
-from PyQt6.QtCore import QObject, pyqtSignal
+from qtpy.QtCore import QObject, Signal
 
 T = TypeVar("T")
 R = ParamSpec("R")
@@ -9,7 +9,7 @@ R = ParamSpec("R")
 class BaseRef(QObject, Generic[T]):
     _isRef = True
 
-    valueChanged = pyqtSignal(object)
+    valueChanged = Signal(object)
 
     def notify(self) -> None:
         self.valueChanged.emit(self.get())
