@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "pyqt_reactivity"
+version = "0.1.0"
+description = "Reactivity library for PyQT"
+authors = ["Indra Rudianto <indrarudianto.official@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/indrarudianto/pyqt-reactivity"
+repository = "https://github.com/indrarudianto/pyqt-reactivity"
+include = []
+exclude = ["tests/**/*", "docs/**/*", "examples/**/*", "scripts/**/*"]
+
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+PyQt6 = "^6.6.1"
+
+[tool.poetry.dev-dependencies]
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+coverage = "^7.4.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.scripts]
+
+
+[tool.poetry.extras]
+
+
+[tool.poetry.plugins]
